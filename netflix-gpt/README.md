@@ -4,8 +4,14 @@
 - Setup Tailwing CSS
 - Added Tailwing Classes to div
 - Header
+- Routing of App
 - Login page
 - Sign Up Form
+- validation for
+- useRef
+- Firebase setup
+- Deploying our app to production
+- Create Signup user Account
 
 # Features
 
