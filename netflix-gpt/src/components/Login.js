@@ -7,10 +7,13 @@ import {
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [isSignInForm, setIsSignIsForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
+
+  const navigate = useNavigate();
 
   const name = useRef(null);
   const email = useRef(null);
@@ -34,7 +37,7 @@ const Login = () => {
         .then((userCredential) => {
           // Signed up
           const user = userCredential.user;
-          // ...
+          navigate("/browse");
           console.log(user);
         })
         .catch((error) => {
@@ -53,6 +56,7 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
+          navigate("/browse");
           console.log(user);
           // ...
         })
